@@ -1,0 +1,36 @@
+﻿@model DFA_CORE.Models.Order
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OQuantity)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.OId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
